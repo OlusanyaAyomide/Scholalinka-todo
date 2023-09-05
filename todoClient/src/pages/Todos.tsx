@@ -7,11 +7,12 @@ import { useScreenSize } from '@/hooks/useScreenSize'
 import MultipleStages from '@/components/todo/MultipleStages'
 import MobileInput from '@/components/todo/MobileInput'
 import DateFormatter from '@/utils/DateFormatter'
+import { useContext } from 'react'
 
 
 export default function Todos() {
     const {isMd} = useScreenSize()
-    
+    const {isDrawerOpened} = useContext(AllContext)
     const newDate = new DateFormatter()
   return (
     <Layout>
@@ -32,7 +33,7 @@ export default function Todos() {
             </div>
         </div>
         {!isMd && <MobileDrawer/>}
-        <MobileInput/>
+        {!isDrawerOpened && <MobileInput/>}
     </Layout>
   )
 }

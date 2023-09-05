@@ -42,6 +42,7 @@ export const AllContextProvider =({children}:{children:React.ReactNode})=>{
     const [todoDueDate,setTodoDueDate] = useState<Date>(new Date()) 
     const [startDate,setTodoStartDate] = useState<Date>(new Date()) 
     const [endDate,setTodoEndDate] = useState<Date>(new Date()) 
+    const [textFocused,setTextFocused] = useState(false)
 
     //value of current page
     const [currentPage,setCurrentPage] = useState<number>(1)
@@ -55,8 +56,8 @@ export const AllContextProvider =({children}:{children:React.ReactNode})=>{
     const context ={
         isDrawerOpened,setIsDrawerOpened,activeTask,setActiveTask,todo,setTodo,user,setUser,currentPage,setCurrentPage,
         page,setPage,newTodo,setNewTodo,todoDueDate,setTodoDueDate,startDate,setTodoStartDate,endDate,setTodoEndDate,
-        theme,setTheme,dates,setDate,chosenDate,setChosenDate,allTodo,setAllTodo,paginatedTodo,setPaginatedTodo
-    }
+        theme,setTheme,dates,setDate,chosenDate,setChosenDate,allTodo,setAllTodo,paginatedTodo,setPaginatedTodo,textFocused,setTextFocused
+      }
     return <AllContext.Provider value={context}>{children}</AllContext.Provider>
 
 }

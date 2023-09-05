@@ -34,7 +34,7 @@ export default function EditOrAddTodo() {
         setNewTodo("")
         toast({
             description:`Todo ${isAdding?"added":"updated"} succesfully`,
-            className:`border-2 bg-background/50 backdrop-sm ${isDark?"text-white":""} h-fit py-2 border-green-500`,
+            className:`border-2 bg-background/50 backdrop-blur-sm ${isDark?"text-white":""} h-fit py-2 border-green-500`,
             duration:2000
         })
     }
@@ -44,7 +44,7 @@ export default function EditOrAddTodo() {
         if(!todotext){
             return toast({
                 description:"Text filed in empty",
-                className:`border-2 bg-background/50 backdrop-sm ${isDark?"text-white":""} h-fit py-2 border-red-500`
+                className:`border-2 bg-background/50 backdrop-blur-sm ${isDark?"text-white":""} h-fit py-2 border-red-500`
               })
         }
         mutate({text:todotext,startDate,endDate,dueDate,_id:!isAdding?_id:null})

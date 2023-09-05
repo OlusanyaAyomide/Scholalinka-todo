@@ -28,8 +28,8 @@ export default function TodoView() {
             <div className="flex-center">
                 <Icons.clock className="text-main mr-2 text-lg"/>
                 <h1>
-                    <span>{startDate}</span>
-                    <span>{endDate}</span>
+                    <span>{dateformatter.getTruncatedTime(startDate)}</span>
+                    <span>{dateformatter.getTruncatedTime(endDate)}</span>
                 </h1>
             </div>
             <div className="flex-center mt-10">
