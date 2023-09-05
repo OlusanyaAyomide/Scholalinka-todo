@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es2016",                                 
+
+    /* Modules */
+    "module": "commonjs",                                
+    "rootDir": "src",                                   
+
+
+    "esModuleInterop": true,
+    // "preserveSymlinks": true,                         
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,                                      
+  },
+}
