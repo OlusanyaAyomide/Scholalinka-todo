@@ -31,7 +31,7 @@ const onErrorResponse = (error:AxiosError|Error):Promise<AxiosError>=>{
 }
 
 
-const baseURL ="http://localhost:4000/api/v1"
+const baseURL ="https://scholalinka-todo.onrender.com/api/v1"
 const request = axios.create({
   baseURL,
   headers:{
