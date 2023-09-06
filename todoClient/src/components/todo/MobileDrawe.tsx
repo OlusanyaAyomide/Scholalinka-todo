@@ -10,6 +10,7 @@ export function MobileDrawer() {
     const isDark = theme==="dark"
     console.log("hereee")
 
+      //prevent drawer oveflow on iPhone devices
     const checkScreenHeight = ()=>{
       console.log(window.innerHeight)
       return window.innerHeight < 300
