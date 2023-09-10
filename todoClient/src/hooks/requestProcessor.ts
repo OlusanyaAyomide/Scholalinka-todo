@@ -60,7 +60,7 @@ export const usePostRequest = ({queryKey,mutationFn,onSuccess=()=>{},onError=()=
           toast({
             title:"Network error",
             description:"Connection is down,try again",
-            className:"border-2 bg-background/50 backdrop-sm h-fit py-2 border-red-500"
+            className:"border-2 bg-background/50 backdrop-blur-sm h-fit py-2 border-red-500"
           })
       }
 

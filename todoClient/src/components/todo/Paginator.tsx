@@ -8,12 +8,12 @@ export default function Paginator() {
     const {paginationRange,handleChange,currentPage,isbackDisabled} = usePagination()
 
     return (
-    <div className='mt-8 border-t pt-6 flex-center justify-between'>
+    <div className='mt-8 border-t max-md:max-w-[90vw] default-scroll overflow-auto pt-6 flex-center justify-between'>
 
         <Link duration={300} smooth offset={-50} to="todo-top">
             <button 
                 onClick={()=>{handleChange({currentPage:currentPage-1})}} 
-                disabled={currentPage===1}  className='disabled:opacity-40 flex-center'>
+                disabled={currentPage===1}  className='disabled:opacity-40 flex-center mr-2'>
                 <Icons.back className={`text-lg mr-1 ${currentPage===1?"opacity-40":""}`}/>
                 <span>Prev</span>
                 <span className='max-md:hidden'>ious</span>
@@ -30,7 +30,7 @@ export default function Paginator() {
             }
             return(
             <Link duration={300} key={key} smooth offset={-50} to="todo-top">
-                <button onClick={()=>{handleChange({currentPage:item})}} key={key} className={`h-7 w-7 grid place-content-center ${isActive?"bg-todo-accent":""} w-4 mr-3 rounded-full`}>  
+                <button onClick={()=>{handleChange({currentPage:item})}} key={key} className={`h-7 w-7 grid place-content-center ${isActive?"bg-todo-accent":""} w-4 mr-1 sm:mr-3 rounded-full`}>  
                 {item} 
                 </button>
             </Link> 

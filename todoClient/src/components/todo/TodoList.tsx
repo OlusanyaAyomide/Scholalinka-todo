@@ -45,7 +45,7 @@ export default function TodoList() {
           </div>
       })}
     </div>
-
+    
     {!isEmpty  && <Paginator/>}
    </div>
   )

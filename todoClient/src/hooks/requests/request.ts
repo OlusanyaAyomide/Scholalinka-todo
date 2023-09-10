@@ -24,12 +24,10 @@ const onErrorResponse = (error:AxiosError|Error):Promise<AxiosError>=>{
     const {message} = error
     const {method,url} = error.config as AxiosRequestConfig
     const {statusText,status} = error.response as AxiosResponse ?? {}
-    // console.log(`${method?.toUpperCase()} ${url} | Error ${status} ${message}`)
     if (status===401){console.log("LogIn Required")}
   }
   return Promise.reject(error)
 }
-
 
 const baseURL ="https://scholalinka-todo.onrender.com/api/v1"
 const request = axios.create({
